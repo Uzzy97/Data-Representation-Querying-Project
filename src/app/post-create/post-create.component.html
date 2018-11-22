@@ -3,21 +3,33 @@
     <mat-expansion-panel>
       <mat-expansion-panel-header>
         <mat-panel-title>
-         <b> Personal Data </b>
+          <b> Personal Data </b>
         </mat-panel-title>
         <mat-panel-description>
-       <b><i> Enter Your Name & Date of Birth (Your Data Is Secure Under Our Policy Terms) </i></b>
+          <b><i> Enter Your Name & Date of Birth (Your Data Is Secure Under Our Policy Terms) </i></b>
         </mat-panel-description>
       </mat-expansion-panel-header>
 
       <mat-form-field>
+        <input
+        matInput
+        type="text"
+        name="Name"
+        ngModel
+        required
+        minlength="3"
+        #Name="ngModel">
+       
       </mat-form-field>
+      <button mat-raised-button color="accent" type="submit">Save Post</button>
 
-      <mat-form-field>
+    
+
+      <!--mat-form-field>
         <input matInput placeholder="Name">
       </mat-form-field>
       <mat-form-field>
-        <input matInput placeholder="DOB">
+        <input matInput placeholder="Number">
       </mat-form-field>
       <button mat-raised-button color="accent" type="submit">Save Post</button>
     </mat-expansion-panel>
@@ -25,10 +37,10 @@
     <mat-expansion-panel>
       <mat-expansion-panel-header>
         <mat-panel-title>
-         <b> Vehicle Information </b>
+          <b> Vehicle Information </b>
         </mat-panel-title>
         <mat-panel-description>
-        <b><i> Enter You Vehicle Details In Order To Upload To Our Database </i></b>
+          <b><i> Enter You Vehicle Details In Order To Upload To Our Database </i></b>
         </mat-panel-description>
       </mat-expansion-panel-header>
 
@@ -38,27 +50,15 @@
       </mat-form-field>
 
       <mat-form-field>
-        <input matInput placeholder="Car Model">
-      </mat-form-field>
-
-      <mat-form-field>
         <input matInput placeholder="Car Make">
       </mat-form-field>
 
       <mat-form-field>
-        <input matInput placeholder="Car Type">
-      </mat-form-field>
-
-      <mat-form-field>
-        <input matInput placeholder="Car Type">
+        <input matInput placeholder="Car Model">
       </mat-form-field>
 
       <mat-form-field>
         <input matInput placeholder="Year">
-      </mat-form-field>
-
-      <mat-form-field>
-        <input matInput placeholder="Price">
       </mat-form-field>
 
       <mat-form-field>
@@ -86,16 +86,13 @@
       </mat-form-field>
 
       <mat-form-field>
-        <input matInput placeholder="Doors">
-      </mat-form-field>
-
-      <mat-form-field>
         <input matInput placeholder="Country of Registration">
       </mat-form-field>
-
 
       <button mat-raised-button color="accent" type="submit">Save Post</button>
     </mat-expansion-panel>
   </form>
 
-</mat-accordion>
+</mat-accordion-->
+
+

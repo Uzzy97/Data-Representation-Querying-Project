@@ -40,7 +40,7 @@ export class PostCreateComponent implements OnInit {
 
   onAddPost(form: NgForm) {
 
-    this.service.addPost(form.value.title, form.value.content).subscribe();
+    this.service.addPost(form.value.Name, form.value.Number).subscribe();
     
     console.log(form.value);
     form.resetForm();

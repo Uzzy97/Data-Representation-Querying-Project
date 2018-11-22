@@ -9,8 +9,8 @@ mongoose.connect(mongoDB);
 
 var Schema = mongoose.Schema;
 var postSchema = new Schema({
-    title: String,
-    content: String
+    name: String,
+    number: String
 })
 
 var PostModel = mongoose.model('post', postSchema);
