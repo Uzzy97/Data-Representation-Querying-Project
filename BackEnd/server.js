@@ -38,12 +38,12 @@ app.get('/', function (req, res) {
 
 app.post('/api/posts', function (req, res) {
     console.log("post successful");
-    console.log(req.body.title);
-    console.log(req.body.content);
+    console.log(req.body.name);
+    console.log(req.body.number);
 
     PostModel.create({
-        title: req.body.title,
-        content: req.body.content
+        name: req.body.name,
+        number: req.body.number
     })
 
     // adding this text will close server (stopping double posts)

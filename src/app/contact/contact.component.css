@@ -6,7 +6,7 @@
     text-shadow: crimson;
     border-radius: 5px;
     color:rgb(174, 122, 98);
-    background-color: rgb(254, 213, 183);
+    background-color: rgb(96, 45, 76);
     padding: 10px;
 }
 
@@ -56,4 +56,10 @@ input[type=submit]:hover {
         width: 100%;
         margin-top: 0;
     }
+}
+.contact{
+
+    background-color: rgb(254, 213, 183);
+    color: rgb(0, 0, 0);
+
 }

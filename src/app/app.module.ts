@@ -18,6 +18,7 @@ import { PostCreateComponent } from './post-create/post-create.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ContactComponent } from './contact/contact.component';
 import { CarsComponent } from './cars/cars.component';
+import { SubmitComponent } from './submit/submit.component';
 
 const appRoutes: Routes = [
 
@@ -51,7 +52,8 @@ const appRoutes: Routes = [
     PostCreateComponent,
     HomepageComponent,
     ContactComponent,
-    CarsComponent
+    CarsComponent,
+    SubmitComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
