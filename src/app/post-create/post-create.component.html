@@ -1,4 +1,46 @@
-<mat-card>
+<mat-accordion>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Personal Data
+      </mat-panel-title>
+      <mat-panel-description>
+        Enter Name & Age
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <form (submit)="onAddPost(postForm)" #postForm="ngForm">
+
+      <mat-form-field>
+        <br>
+        Enter Your Name:
+        <br>
+        <br>
+        <input matInput placeholder="Name" type="text" name="name" ngModel required minlength="3" #name="ngModel">
+        <mat-error *ngIf="name.invalid">Please enter a post title.</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+
+        <br>
+        Enter Your Age:
+        <br>
+        <br> <input matInput rows="4" name="age" ngModel required #age="ngModel">
+        <mat-error *ngIf="age.invalid">Please enter a post title.</mat-error>
+      </mat-form-field>
+      <button mat-raised-button color="accent" type="submit">Save Post</button>
+    </form>
+
+
+
+  </mat-expansion-panel>
+
+</mat-accordion>
+
+
+
+
+
+<!--mat-card>
     <form (submit)="onAddPost(postForm)" #postForm="ngForm">
         
       <mat-form-field>
@@ -35,9 +77,40 @@
         color="accent"
         type="submit">Save Post</button>
     </form>
-  </mat-card>
-  
-  
+  </mat-card-->
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <!--mat-accordion>
@@ -67,9 +140,9 @@
     </mat-expansion-panel>
   </form-->
 
-    
 
-      <!--mat-form-field>
+
+<!--mat-form-field>
         <input matInput placeholder="Name">
       </mat-form-field>
       <mat-form-field>
@@ -138,5 +211,3 @@
   </form>
 
 </mat-accordion-->
-
-

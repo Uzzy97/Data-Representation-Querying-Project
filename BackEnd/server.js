@@ -9,8 +9,8 @@ mongoose.connect(mongoDB);
 
 var Schema = mongoose.Schema;
 var postSchema = new Schema({
-    title: String,
-    content: String
+    name: String,
+    age: String
 })
 
 var PostModel = mongoose.model('post', postSchema);
@@ -38,12 +38,12 @@ app.get('/', function (req, res) {
 
 app.post('/api/posts', function (req, res) {
     console.log("post successful");
-    console.log(req.body.title);
-    console.log(req.body.content);
+    console.log(req.body.name);
+    console.log(req.body.age);
 
     PostModel.create({
-        title: req.body.title,
-        content: req.body.content
+        name: req.body.name,
+        age: req.body.age
     })
 
     // adding this text will close server (stopping double posts)
