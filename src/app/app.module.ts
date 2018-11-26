@@ -19,6 +19,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { ContactComponent } from './contact/contact.component';
 import { CarsComponent } from './cars/cars.component';
 import { SubmitComponent } from './submit/submit.component';
+import { Error404Component } from './error404/error404.component';
 
 const appRoutes: Routes = [
 
@@ -41,6 +42,10 @@ const appRoutes: Routes = [
   {
     path: 'contact',
     component: ContactComponent
+  },
+  {
+  path: '**',
+  component: Error404Component
   }
 ];
 
@@ -53,7 +58,8 @@ const appRoutes: Routes = [
     HomepageComponent,
     ContactComponent,
     CarsComponent,
-    SubmitComponent
+    SubmitComponent,
+    Error404Component
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

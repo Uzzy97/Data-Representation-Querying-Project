@@ -5,53 +5,30 @@
   <a mat-raised-button color="primary" [routerLink]="['/']"><mat-icon>add</mat-icon></a>
 </div> -->
 
-<mat-toolbar>
-  <div class="background">
+<!--mat-toolbar-->
+<div class="background">
 
 
-    <mat-toolbar-row>
-      <span class="title-center">
-          <button mat-button [routerLink]="['/homepage']"><b>UZBORN</b></button>
-      </span>
-      
-      <!--button mat-button [routerLink]="['/homepage']">Homepage</button-->
-      <!--button mat-button [routerLink]="['/create']" color="primary">Create</button>
-    <button mat-button [routerLink]="['/list']">List</button>-->
-      <button mat-button [routerLink]="['/cars']">Used Cars</button>
-      <button mat-button color="white" [matMenuTriggerFor]="menu">Sell Your Car</button>
-      <mat-menu color="primary" #menu="matMenu">
-        <button color="primary" mat-menu-item [routerLink]="['/create']">Create</button>
-        <button color="primary" mat-menu-item [routerLink]="['/list']">List</button>
-        
-      </mat-menu>
-      <button mat-button [routerLink]="['/contact']">Contact</button>
-      <!--div class="contact">
-          <button mat-button [routerLink]="['/contact']">Contact</button>
-        </div-->
+  <mat-toolbar-row>
+    <span class="title-center">
+      <button mat-button [routerLink]="['/homepage']"><b>UZBORN</b></button>
+    </span>
+    <button mat-button [routerLink]="['/cars']">Used Cars</button>
+    <button mat-button color="white" [matMenuTriggerFor]="menu">Sell Your Car</button>
+    <mat-menu color="primary" #menu="matMenu">
+      <button color="primary" mat-menu-item [routerLink]="['/create']">Create</button>
+      <button color="primary" mat-menu-item [routerLink]="['/list']">List</button>
 
-        
-    </mat-toolbar-row>
+    </mat-menu>
+    <button mat-button [routerLink]="['/contact']">Contact</button>
 
-  </div>
 
-  <!--mat-toolbar-row>
-    <div class="background">
 
-      <button mat-button [routerLink]="['/homepage']">Homepage</button>
-      <button mat-button [routerLink]="['/create']" color="primary">Create</button>
-    <button mat-button [routerLink]="['/list']">List</button>>
-      <button mat-button [routerLink]="['/cars']">Used Cars</button>
-      <button mat-button color="white" [matMenuTriggerFor]="menu">Sell Your Car</button>
-      <mat-menu color="primary" #menu="matMenu">
-        <button color="primary" mat-menu-item [routerLink]="['/create']">Create</button>
-        <button color="primary" mat-menu-item [routerLink]="['/list']">List</button>
+  </mat-toolbar-row>
 
-      </mat-menu>
-    </div>
-    <div class="contact">
-      <button mat-button [routerLink]="['/contact']">Contact</button>
-    </div>
-  </mat-toolbar-row-->
-</mat-toolbar>
+</div>
+
+
+<!--/mat-toolbar-->
 
 <router-outlet></router-outlet>

@@ -9,8 +9,8 @@ mongoose.connect(mongoDB);
 
 var Schema = mongoose.Schema;
 var postSchema = new Schema({
-    name: String,
-    number: String
+    title: String,
+    content: String
 })
 
 var PostModel = mongoose.model('post', postSchema);
@@ -18,13 +18,13 @@ var PostModel = mongoose.model('post', postSchema);
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.use(function (req, res, next) {
+app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
     res.header("Access-Control-Allow-Headers",
-        "Origin, X-Requested-With, Content-Type, Accept");
+    "Origin, X-Requested-With, Content-Type, Accept");
     next();
-});
+    });
 
 app.post('/name', function (req, res) {
     res.send("Hello you sent " +
@@ -38,12 +38,12 @@ app.get('/', function (req, res) {
 
 app.post('/api/posts', function (req, res) {
     console.log("post successful");
-    console.log(req.body.name);
-    console.log(req.body.number);
+    console.log(req.body.title);
+    console.log(req.body.content);
 
     PostModel.create({
-        name: req.body.name,
-        number: req.body.number
+        title: req.body.title,
+        content: req.body.content
     })
 
     // adding this text will close server (stopping double posts)

@@ -1,4 +1,46 @@
-<mat-accordion>
+<mat-card>
+    <form (submit)="onAddPost(postForm)" #postForm="ngForm">
+        
+      <mat-form-field>
+        <br>
+        Enter Your Name Please:
+        <br>
+        <br>
+        <input
+          matInput placeholder="Name"
+          type="text"
+          name= "title"
+          ngModel
+          required
+          minlength="3"
+          #title="ngModel">
+        <mat-error *ngIf="title.invalid">Please enter a post title.</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+
+          <br>
+          Enter Your Message:
+          <br>
+          <br>        <textarea
+          matInput
+          rows="4"
+          name="content"
+          ngModel
+          required
+          #content="ngModel"></textarea>
+        <mat-error *ngIf="content.invalid">Please enter a post title.</mat-error>
+      </mat-form-field>
+      <button
+        mat-raised-button
+        color="accent"
+        type="submit">Save Post</button>
+    </form>
+  </mat-card>
+  
+  
+
+
+<!--mat-accordion>
   <form (submit)="onAddPost(postForm)" #postForm="ngForm">
     <mat-expansion-panel>
       <mat-expansion-panel-header>
@@ -18,10 +60,12 @@
         ngModel
         required
         minlength="3"
-        #Name="ngModel">
+        #name="ngModel">
        
       </mat-form-field>
       <button mat-raised-button color="accent" type="submit">Save Post</button>
+    </mat-expansion-panel>
+  </form-->
 
     
 
