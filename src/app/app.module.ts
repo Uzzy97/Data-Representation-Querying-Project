@@ -24,7 +24,7 @@ import { Error404Component } from './error404/error404.component';
 const appRoutes: Routes = [
 
   {
-    path: 'homepage',
+    path: '',
     component: HomepageComponent
   },
   {
@@ -42,6 +42,10 @@ const appRoutes: Routes = [
   {
     path: 'contact',
     component: ContactComponent
+  },
+  {
+    path: 'submit',
+    component: SubmitComponent
   },
   {
   path: '**',

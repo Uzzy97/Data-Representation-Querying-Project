@@ -19,3 +19,7 @@
     clear: both;
     display: table;
   }
+  .break{
+    color: white;
+    height: 5px;
+  }

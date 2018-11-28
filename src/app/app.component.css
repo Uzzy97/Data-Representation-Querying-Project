@@ -4,8 +4,16 @@
 
    background-image: url("/assets/images/banner.jpg");
    width: 100%;
-    color: rgb(240, 248, 255);
-    
+   color: rgb(240, 248, 255);
+   height: 80px;
+   background-size: cover;
+   text-align: center;
+   padding-top: 40px;
+   font-family: 'Times New Roman', Times, serif;
+
+   
+  
+     
     
 
 }
@@ -15,4 +23,11 @@
     background-color: rgb(254, 213, 183);
     color: rgb(0, 0, 0);
 
+}
+
+
+#header{
+
+    height: 50px;
+    font-family: 'Times New Roman', Times, serif;
 }

@@ -9,18 +9,18 @@
 <div class="background">
 
 
-  <mat-toolbar-row>
-    <span class="title-center">
-      <button mat-button [routerLink]="['/homepage']"><b>UZBORN</b></button>
-    </span>
-    <button mat-button [routerLink]="['/cars']">Used Cars</button>
-    <button mat-button color="white" [matMenuTriggerFor]="menu">Sell Your Car</button>
+  <mat-toolbar-row id="header">
+    
+      <button mat-button [routerLink]="['']"><h2>UZBORN</h2></button>
+    
+    <button mat-button [routerLink]="['/cars']"><h2>Used Cars</h2></button>
+    <button mat-button color="white" [matMenuTriggerFor]="menu"><h2>Sell Your Car</h2></button>
     <mat-menu color="primary" #menu="matMenu">
       <button color="primary" mat-menu-item [routerLink]="['/create']">Create</button>
       <button color="primary" mat-menu-item [routerLink]="['/list']">List</button>
 
     </mat-menu>
-    <button mat-button [routerLink]="['/contact']">Contact</button>
+    <button mat-button [routerLink]="['/contact']"><h2>Contact</h2></button>
 
 
 

@@ -70,7 +70,10 @@ body, html {
             </select>
             <label for="subject">Subject</label>
             <textarea id="subject" name="subject" placeholder="Leave Us A Message ..." style="height:170px"></textarea>
-            <input type="submit" value="Submit">
+            <input type="submit" [routerLink]="['/submit']" value="Submit">
+
+            <!--button color="primary" mat-menu-item [routerLink]="['/submit']">List</button-->
+            
             
              
           </form>
