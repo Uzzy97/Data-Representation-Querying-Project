@@ -1,38 +1,9 @@
-<!--Referenced W3 Schools>
-
-<div class="textStyle">
-  <h1>Contact Us</h1>
-  <p>Feel Free To Leave A Feedback, Or Leave Us A Message:</p>
-</div>
-
-<div class="row">
-  <div class="column">
-    <img src="/assets/images/contact.jpg" style="height:100%;">
-  </div>
-  <div class="column">
-    <form action="/action_page.php">
-      <label for="fname">First Name</label>
-      <input type="text" id="fname" name="firstname" placeholder="First Name">
-      <label for="lname">Surname</label>
-      <input type="text" id="lname" name="surname" placeholder="Surname">
-      <label for="country">Country</label>
-      <select id="country" name="country">
-        <option value="australia">Ireland</option>
-        <option value="canada">Northern Ireland</option>
-        <option value="usa">United Kingdom</option>
-      </select>
-      <label for="subject">Subject</label>
-      <textarea id="subject" name="subject" placeholder="Leave Us A Message ..." style="height:170px"></textarea>
-      <input type="submit" value="Submit">
-    </form>
-  </div>
-</div-->
-
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body, html {
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body, html {
     height: 100%;
     margin: 0;
 }
@@ -40,47 +11,41 @@ body, html {
 .bg {
     /* The image used */
     background-image: url("/assets/images/contact1.jpg");
-
-    /* Full height */
     height: 100%; 
-
-    /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 </style>
 </head>
-<body>
-<br>
-<div class="bg">
-    <div class="row">
-        
-        <div class="column">
-          <form action="/action_page.php">
-            <label for="fname">First Name</label>
-            <input type="text" id="fname" name="firstname" placeholder="First Name">
-            <label for="lname">Surname</label>
-            <input type="text" id="lname" name="surname" placeholder="Surname">
-            <label for="country">Country</label>
-            <select id="country" name="country">
-              <option value="australia">Ireland</option>
-              <option value="canada">Northern Ireland</option>
-              <option value="usa">United Kingdom</option>
-            </select>
-            <label for="subject">Subject</label>
-            <textarea id="subject" name="subject" placeholder="Leave Us A Message ..." style="height:170px"></textarea>
-            <input type="submit" [routerLink]="['/submit']" value="Submit">
 
-            <!--button color="primary" mat-menu-item [routerLink]="['/submit']">List</button-->
-            
-            
-             
-          </form>
-          
-        </div>
+<body>
+  <br>
+  <div class="bg">
+    <div class="row">
+
+      <div class="column">
+        <form action="/action_page.php">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="First Name">
+          <label for="lname">Surname</label>
+          <input type="text" id="lname" name="surname" placeholder="Surname">
+          <label for="country">Country</label>
+          <select id="country" name="country">
+            <option value="australia">Ireland</option>
+            <option value="canada">Northern Ireland</option>
+            <option value="usa">United Kingdom</option>
+          </select>
+          <label for="subject">Subject</label>
+          <textarea id="subject" name="subject" placeholder="Leave Us A Message ..." style="height:170px"></textarea>
+          <input type="submit" [routerLink]="['/submit']" value="Submit">
+
+        </form>
+
       </div>
-</div>
+    </div>
+  </div>
 
 </body>
+
 </html>

@@ -23,7 +23,7 @@ export class PostDetailsComponent implements OnInit {
 
   onDelete(id: String) {
     console.log("Delete called " + id);
-    this.ps.deletePost(id).subscribe( () =>{
+    this.ps.deletePost(id).subscribe(() => {
       this.ngOnInit();
     });
   }
