@@ -1,0 +1,40 @@
+<mat-card>
+  <!--Creating a form -->
+    <form (submit)="onEditPost(postForm)" #postForm="ngForm">
+      <!--Prompting user to change first name-->
+      <mat-form-field>
+        First Name:
+        <input matInput type="text" name="fname" ngModel={{post[0].fname}} required minlength="3" #fname="ngModel"/>
+        <mat-error *ngIf="fname.invalid">Please Enter Your First Name</mat-error>
+      </mat-form-field>
+      <br>
+      <mat-form-field>
+        <!--Prompting user to change Surname-->
+      Surname:
+        <textarea matInput rows="4" name="sname" ngModel={{post[0].sname}} required #sname="ngModel"></textarea>
+        <mat-error *ngIf="sname.invalid">Please Enter Your Surname</mat-error>
+      </mat-form-field>
+      <br>
+      <mat-form-field>
+        <!--Prompting user to change telephone-->
+      Telephone:
+        <input matInput type="text" name="number" ngModel={{post[0].number}} required minlength="3" #number="ngModel">
+        <mat-error *ngIf="number.invalid">Please Enter Your Telephone Number</mat-error>
+      </mat-form-field>
+      <br>
+      <mat-form-field>
+        <!--Prompting user to change Occupation-->
+      Occupation:
+        <input matInput type="text" name="occupation" ngModel={{post[0].occupation}} required minlength="3" #occupation="ngModel">
+        <mat-error *ngIf="job.invalid">Please Enter Your Occupation</mat-error>
+      </mat-form-field>
+      <br>
+      <mat-form-field>
+        <!--Prompting user to change feedback-->
+      Feedback:
+        <input matInput type="text" name="message" ngModel={{post[0].message}} required minlength="3" #message="ngModel">
+        <mat-error *ngIf="message.invalid">Please Enter A Feedback</mat-error>
+      </mat-form-field>
+      <button mat-raised-button color="accent" type="submit">Update Feedback</button>
+    </form>
+  </mat-card>

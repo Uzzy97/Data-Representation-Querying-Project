@@ -1,4 +1,7 @@
 export interface Post {
-  name: string;
-  age: string;
+    fname: string;
+    sname: string;
+    number: string;
+    occupation: string;
+    message: string;
 }

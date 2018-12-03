@@ -20,6 +20,8 @@ import { ContactComponent } from './contact/contact.component';
 import { CarsComponent } from './cars/cars.component';
 import { SubmitComponent } from './submit/submit.component';
 import { Error404Component } from './error404/error404.component';
+import { EditFeedbackComponent } from './edit-feedback/edit-feedback.component';
+import { ViewFeedbackComponent } from './view-feedback/view-feedback.component';
 
 const appRoutes: Routes = [
 
@@ -50,6 +52,14 @@ const appRoutes: Routes = [
   {
   path: '**',
   component: Error404Component
+  },
+  {
+    path: 'edit/:id',
+    component: EditFeedbackComponent
+  },
+  {
+    path: 'view',
+    component: ViewFeedbackComponent
   }
 ];
 
@@ -63,7 +73,9 @@ const appRoutes: Routes = [
     ContactComponent,
     CarsComponent,
     SubmitComponent,
-    Error404Component
+    Error404Component,
+    EditFeedbackComponent,
+    ViewFeedbackComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

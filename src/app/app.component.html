@@ -1,28 +1,29 @@
+<!--Styling Navigation Bar-->
 <div class="background">
 
 
   <mat-toolbar-row id="header">
-
+    <!--Homepage-->
     <button mat-button [routerLink]="['']">
       <h2>UZBORN</h2>
     </button>
-
+    <!--Routing - Directing to used cars-->
     <button mat-button [routerLink]="['/cars']">
       <h2>Used Cars</h2>
     </button>
     <button mat-button id="color" [matMenuTriggerFor]="menu">
-      <h2>Subscribe Now</h2>
+      <h2>Feedback</h2>
     </button>
+    <!--Drop down menu-->
     <mat-menu id="color" #menu="matMenu">
-      <button id="color" mat-menu-item [routerLink]="['/create']">Create</button>
-      <button id="color" mat-menu-item [routerLink]="['/list']">List</button>
+      <button id="color" mat-menu-item [routerLink]="['/list']">View Feedbacks</button>
+      <button id="color" mat-menu-item [routerLink]="['/create']">Add Feedback</button>
+      <button id="color" mat-menu-item [routerLink]="['/list']">Edit Feedback</button>
 
     </mat-menu>
     <button mat-button [routerLink]="['/contact']">
       <h2>Contact</h2>
     </button>
-
-
 
   </mat-toolbar-row>
 

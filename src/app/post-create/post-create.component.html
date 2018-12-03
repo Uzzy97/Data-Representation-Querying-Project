@@ -1,34 +1,41 @@
-<mat-accordion>
-  <mat-expansion-panel>
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        Personal Data
-      </mat-panel-title>
-      <mat-panel-description>
-        Enter Name & Age
-      </mat-panel-description>
-    </mat-expansion-panel-header>
-    <form (submit)="onAddPost(postForm)" #postForm="ngForm">
-
-      <mat-form-field>
-        <br>
-        Full Name:
-        <br>
-        <input matInput placeholder="Name" type="text" name="name" ngModel required minlength="3" #name="ngModel">
-        <mat-error *ngIf="name.invalid">Please enter your full name.</mat-error>
-      </mat-form-field>
-
-      <mat-form-field>
-        <br>
-        Age:
-        <br>
-        <br> <input matInput rows="4" name="age" ngModel required #age="ngModel">
-        <mat-error *ngIf="age.invalid">Please enter your age.</mat-error>
-      </mat-form-field>
-
-      <button mat-raised-button color="accent" type="submit">Save Post</button>
-    </form>
-
-  </mat-expansion-panel>
-
-</mat-accordion>
+<mat-card>
+  <!--Form Field prompting use to enter details-->
+  <form (submit)="onAddPost(postForm)" #postForm="ngForm">
+    <!--Promptng user to enter firstname-->
+    <mat-form-field>
+      Firstname:
+      <input matInput type="text" name="fname" ngModel required minlength="3" #fname="ngModel">
+      <mat-error *ngIf="fname.invalid">Please Enter Your First Name</mat-error>
+    </mat-form-field>
+    <br>
+    <!--Promptng user to enter surname-->
+    <mat-form-field>
+      Surname:
+      <textarea matInput name="sname" ngModel required #sname="ngModel"></textarea>
+      <mat-error *ngIf="sname.invalid">Please Enter Your Surname</mat-error>
+    </mat-form-field>
+    <br>
+    <!--Promptng user to enter telephone-->
+    <mat-form-field>
+      Telephone:
+      <textarea matInput name="number" ngModel required #number="ngModel"></textarea>
+      <mat-error *ngIf="number.invalid">Please Enter Your Telephone Number</mat-error>
+    </mat-form-field>
+    <br>
+    <!--Promptng user to enter occupation-->
+    <mat-form-field>
+      Occupation:
+      <textarea matInput name="occupation" ngModel required #occupation="ngModel"></textarea>
+      <mat-error *ngIf="occupation.invalid">Please Enter Your Occupation</mat-error>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <!--Promptng user to enter feedback-->
+      Feedback:
+      <textarea matInput name="message" ngModel required #message="ngModel"></textarea>
+      <mat-error *ngIf="message.invalid">Please Enter A Feedback</mat-error>
+    </mat-form-field>
+    <br>
+    <button mat-raised-button color="accent" type="submit">Submit Feedback</button>
+  </form>             
+</mat-card>
